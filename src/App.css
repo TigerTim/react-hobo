@@ -1,0 +1,145 @@
+
+:root {
+  --width: 795px;
+  --height: 425px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial, verdana, sans-serif;
+  font-size: 8px;
+  background: hsl(0, 0%, 80%);
+  text-align: center;
+}
+
+div.App {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: var(--height);
+  width: var(--width);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+
+#pressure {
+  grid-column: 5 / span 4;
+  grid-row: 4 / span 3;
+  flex-flow: row;
+}
+
+#dwd {
+  grid-column: 1 / span 9;
+  grid-row: 1 / span 9;
+  flex-flow: row;
+}
+
+#pressure > div {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+#temp {
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 3;
+}
+
+#voltage1 {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 3  ;
+}
+
+#voltage2 {
+  grid-column: 5 / span 4;
+  grid-row: 1 / span 3;
+}
+
+#tempengine {
+  grid-column: 1 / span 4;
+  grid-row: 7 / span 3;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  font-size: 25px;
+  color: #333;
+  background: linear-gradient(0deg, #555, #999);
+  margin: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.next-btn {
+  grid-column: 3 / span 2;
+  grid-row: -3 / span 2;
+}
+
+.back-btn {
+  grid-column: 1 / span 2;
+  grid-row: -3 / span 2;
+}
+
+.settings-btn {
+  grid-column: 5 / span 2;
+  grid-row: -3 / span 2;
+}
+
+.display {
+  background: linear-gradient(0deg, hsl(0, 0%, 27%), hsl(0, 0%, 40%));
+  color: hsl(208, 100%, 68%);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  font-size: 30px;
+  margin: 4px;
+  padding: 5px 0 5px 0;
+}
+
+
+
+.gauge {
+  width: 250px;
+  height: 74px;
+  display:block;
+  margin: 4px;
+  padding: 4px 4px 4px 4px;
+}
+
+
+
+
+
+
+rect.border {
+  fill: url(#Gradient1);
+  stroke-width: 2;
+  stroke: #aaa;
+}
+
+rect.red {
+  fill: #f33;
+  stroke-width: 2;
+  stroke: #aaa;
+}
+
+line.black {
+  stroke: #333;
+}
+
+.stop-right {
+                stop-color: #bbb;  /* Teal */
+            }
+
+.stop-left {
+                stop-color: #999;  /* Teal */
+            }
+
